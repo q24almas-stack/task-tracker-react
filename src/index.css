@@ -1,13 +1,121 @@
+/* Global body */
 body {
+  font-family: 'Poppins', sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* App container */
+.app {
+  width: 450px;
+  background-color: #f5f7fa;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  color: #1a237e;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* Task input section */
+.task-input {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.task-input input {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #7986cb;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.task-input input:focus {
+  border-color: #3f51b5;
+  outline: none;
+}
+
+.task-input button {
+  background: linear-gradient(45deg, #42a5f5, #478ed1);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.task-input button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(66, 165, 245, 0.5);
+}
+
+/* Task list */
+.task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 14px 20px;
+  border-radius: 15px;
+  background-color: #e3f2fd;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.task-list li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.task-list li span {
+  cursor: pointer;
+  font-size: 1.05rem;
+}
+
+.task-list li.completed span {
+  text-decoration: line-through;
+  color: #90a4ae;
+}
+
+/* Delete button */
+.task-list li button {
+  background: #ef5350;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.task-list li button:hover {
+  background: #e53935;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 25px;
+  color: #1a237e;
+  font-weight: bold;
+}
+
+footer p {
+  margin: 5px 0;
 }
